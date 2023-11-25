@@ -226,7 +226,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .btn-primary:hover {
-  background: #0078b7;
+  background: #3c7473;
 }
 
 .btn-white {
@@ -234,7 +234,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .btn-white:hover {
-  color: #0078b7;
+  color: #3c7473;
   background: #fff;
 }
 
@@ -244,7 +244,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .btn-trans:hover {
-  color: #0078b7;
+  color: #3c7473;
   background: #fff;
 }
 
@@ -302,7 +302,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .btn-toggle.active {
-  background: #0078b7;
+  background: #3c7473;
 }
 
 .btn-toggle.active span {
@@ -354,7 +354,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .job-card-hover:hover i {
-  color: #0078b7 !important;
+  color: #3c7473 !important;
 }
 
 .category-card {
@@ -371,7 +371,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .category-card .card-icon {
-  background-color: #0078b7;
+  background-color: #3c7473;
 }
 
 @media (min-width: 768px) {
@@ -384,7 +384,7 @@ body[data-theme='light'] .default-shape,
 
 @media (min-width: 768px) {
   .category-card:hover {
-    background-color: #0078b7;
+    background-color: #3c7473;
   }
 
   .category-card:hover .card-title {
@@ -557,7 +557,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .gr-check-input input:checked~.checkbox {
-  background: #0078b7;
+  background: #3c7473;
 }
 
 .gr-check-input input:checked~.checkbox::after {
@@ -592,7 +592,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .gr-radio-input input:checked~label .round-indicator {
-  border: 1px solid #0078b7;
+  border: 1px solid #3c7473;
   background: #fff;
 }
 
@@ -614,7 +614,7 @@ body[data-theme='light'] .default-shape,
 
 .round-indicator:after {
   content: "";
-  background-color: #0078b7;
+  background-color: #3c7473;
   min-width: 12px;
   max-width: 12px;
   min-height: 12px;
@@ -1052,7 +1052,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .main-menu>li>.nav-link:hover {
-  color: #0078b7 !important;
+  color: #3c7473 !important;
 }
 
 .main-menu>li:hover>.gr-toggle-arrow i {
@@ -1082,7 +1082,7 @@ body[data-theme='light'] .default-shape,
     border: 1px solid #eae9f2;
     background-color: #ffffff;
     display: block;
-    border-top: 3px solid #0078b7;
+    border-top: 3px solid #3c7473;
   }
 }
 
@@ -1102,7 +1102,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .gr-menu-dropdown>.drop-menu-item:hover>a {
-  color: #0078b7;
+  color: #3c7473;
 }
 
 .gr-menu-dropdown>.drop-menu-item>.gr-menu-dropdown {
@@ -1273,7 +1273,7 @@ body[data-theme='light'] .default-shape,
   }
 
   .gr-megamenu-dropdown .mega-drop-menu-item:hover {
-    color: #0078b7 !important;
+    color: #3c7473 !important;
   }
 }
 
@@ -1359,7 +1359,7 @@ body[data-theme='light'] .default-shape,
 
 @media (min-width: 992px) {
   .gr-megamenu-dropdown-2 .mega-drop-menu-item:hover {
-    color: #0078b7 !important;
+    color: #3c7473 !important;
   }
 }
 
@@ -1487,8 +1487,8 @@ body[data-theme='light'] .default-shape,
   }
 
   .offcanvas-active.navbar-expand-lg .navbar-collapse::-webkit-scrollbar-thumb {
-    background-color: #0078b7;
-    outline: 1px solid slategrey;
+    background-color: #3c7473;
+    outline: 1px solid #3c7473;
   }
 
   .offcanvas-active.navbar-expand-lg .btn-close-off-canvas .icon-burger {
@@ -1536,7 +1536,7 @@ body[data-theme='light'] .default-shape,
   }
 
   .offcanvas-active.navbar-expand-lg .main-menu li:hover>a {
-    color: #0078b7;
+    color: #3c7473;
   }
 
   .offcanvas-active.navbar-expand-lg .main-menu a {
@@ -1702,7 +1702,7 @@ body[data-theme='light'] .default-shape,
 }
 
 [data-pricing-dynamic][data-value-active="yearly"] [data-pricing-trigger] {
-  background: #0078b7;
+  background: #3c7473;
 }
 
 [data-pricing-dynamic][data-value-active="yearly"] [data-pricing-trigger] span {
@@ -1972,12 +1972,12 @@ body[data-theme='light'] .default-shape,
 }
 
 .gr-nav-tabs .nav-link.active {
-  border-color: #0078b7;
-  color: #0078b7;
+  border-color: #3c7473;
+  color: #3c7473;
 }
 
 .gr-bg-primary-opacity-visible {
-  background-color: #0078b7;
+  background-color: #3c7473;
 }
 
 .gr-bg-primary-opacity-1 {
@@ -2017,7 +2017,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .gr-color-primary-opacity-visible {
-  color: #0078b7;
+  color: #3c7473;
 }
 
 .gr-color-primary-opacity-1 {
@@ -2857,7 +2857,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .gr-bg-blue-opacity-visible {
-  background-color: #0078b7;
+  background-color: #3c7473;
 }
 
 .gr-bg-blue-opacity-1 {
@@ -2897,7 +2897,7 @@ body[data-theme='light'] .default-shape,
 }
 
 .gr-color-blue-opacity-visible {
-  color: #0078b7;
+  color: #3c7473;
 }
 
 .gr-color-blue-opacity-1 {
@@ -5583,7 +5583,7 @@ a {
 }
 
 a:hover {
-  color: #0078b7;
+  color: #3c7473;
 }
 
 .gr-hover-shadow-1 {
@@ -5745,12 +5745,12 @@ a.gr-hover-text-blue {
 
 .gr-hover-text-blue:hover,
 a.gr-hover-text-blue:hover {
-  color: #0078b7 !important;
+  color: #3c7473 !important;
 }
 
 .gr-hover-text-blue:hover i,
 a.gr-hover-text-blue:hover i {
-  color: #0078b7 !important;
+  color: #3c7473 !important;
 }
 
 .gr-product-hover-1 .hover-animation-item {
@@ -7008,7 +7008,7 @@ button:focus {
 }
 
 .strike-bottom.blue::after {
-  background: #0078b7;
+  background: #3c7473;
 }
 
 .strike-bottom.white::after {
