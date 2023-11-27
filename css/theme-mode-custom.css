@@ -79,10 +79,15 @@ font-weight: 700;}
 
 .bg-light-grey {background-color: #e2e2e2;}
 
-.col-dark {background-color: #3f293a;}
+.col-dark {background-color: #1c1c1c}
 
-.
+.col-dark-green {background-color: #3c7473}
 
+.col-aqua {background-color: #6cc0bf}
+
+.col-v-light {background-color: #f2f2f2} 
+
+.col-maroon {background-color: #3f293a}
 
 
 .border {
