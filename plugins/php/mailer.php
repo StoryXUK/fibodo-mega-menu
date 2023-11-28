@@ -1,8 +1,8 @@
 // Set the recipient email address.
         // FIXME: Update this to your desired email address.
 
-        $recipient = "info@evergreenautoinsurance.com,mahabulislam86@gmail.com,evergreenautoinsurance@gmail.com";
-        // $recipient = "ashrafuddin765@gmail.com";
+        $recipient = "james@story-x.co.uk";
+        <!-- // $recipient = "anthony.franklin@fibodo.com"; -->
 
 
 
