@@ -107,6 +107,14 @@ font-weight: 700;}
 }
 
 
+
+@media (min-width: 768px) {
+  .desk-rev {
+    display: none;
+  }
+}
+
+
 .card-image {border-radius: 25px;}
 .text-white {
   
