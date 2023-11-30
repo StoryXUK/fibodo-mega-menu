@@ -3412,20 +3412,22 @@ fieldset:disabled a.btn {
 
 .btn-green {
   color: #212529;
-  background-color: #68d585;
-  border-color: #68d585;
+  background-color: #6cc0bf
+  ;
+  border-color: #6cc0bf
+  ;
 }
 
 .btn-green:hover {
   color: #212529;
-  background-color: #4acd6d;
-  border-color: #40ca65;
+  background-color: #3c7473;
+  border-color: #3c7473;
 }
 
 .btn-green:focus, .btn-green.focus {
   color: #212529;
-  background-color: #4acd6d;
-  border-color: #40ca65;
+  background-color: #3c7473;
+  border-color: #3c7473;
   box-shadow: 0 0 0 0.2rem rgba(93, 187, 119, 0.5);
 }
 
