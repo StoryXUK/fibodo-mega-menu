@@ -3,6 +3,10 @@ body[data-theme='light'] .text-primary--light-only {
   color: #3c7473;;
 }
 
+body[data-theme='light'] .text-secondary--light-only {
+  color: #3f293a;;
+}
+
 body[data-theme='dark'] .border-gray-3 {
   border-color: var(--border-color) !important;
 }
