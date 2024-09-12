@@ -1,6 +1,6 @@
 /*=== Media Query ===*/
 body[data-theme='light'] .text-primary--light-only {
-  color: #3c7473;;
+  color: #354259;;
 }
 
 body[data-theme='light'] .text-secondary--light-only {
@@ -28,7 +28,7 @@ body[data-theme='dark'] .btn-toggle {
 }
 
 body[data-theme='dark'] .btn-toggle span {
-  background: #3c7473;;
+  background: #354259;;
 }
 
 body[data-theme='dark'] .btn-toggle.active span {
@@ -69,35 +69,35 @@ body[data-theme='dark'] .btn-toggle.active span {
   font-size: 5rem;
 font-weight: 700;}
 
-.bg-slate-grey {background-color: #3c7473;}
+.bg-slate-grey {background-color: #ba376f;}
 
-.bg-light-slate-grey {background-color: slategrey;}
+.bg-light-slate-grey {background-color: #d59f80;}
 
-.bg-v-light-slate-grey {background-color: rgb(159, 162, 165);}
+.bg-v-light-slate-grey {background-color: #d59f80;}
 
-.bg-pale-blue {background-color: #caf1f8;}
+.bg-pale-blue {background-color: #d9d9d9;}
 
-.bg-v-pale-blue {background-color: #f7feff;}
+.bg-v-pale-blue {background-color: #d9d9d9;}
 
-.bg-teal {background-color: #3c7473;}
+.bg-teal {background-color: #ba376f;}
 
-.bg-light-grey {background-color: #e2e2e2;}
+.bg-light-grey {background-color: #d9d9d9;}
 
-.col-dark {background-color: #1c1c1c}
+.col-dark {background-color: #354259;}
 
-.col-dark-green {background-color: #3c7473}
+.col-dark-green {background-color: #354259;}
 
-.col-aqua {background-color: #6cc0bf}
+.col-aqua {background-color: #d2503b;}
 
-.col-v-light {background-color: #f2f2f2} 
+.col-v-light {background-color: #d9d9d9;} 
 
-.col-maroon {background-color: #3f293a}
+.col-maroon {background-color: #ba376f;}
 
 
 .border {
   
-  background-color: #fff;
-  border: #13151C;
+  background-color: #d9d9d9;
+  border: #354259;
   
   border-radius: 5px;
  
@@ -123,3 +123,47 @@ font-weight: 700;}
 .text-white {
   
   color: #fff;}
+
+  .text-black {
+  
+    color: #000000;}
+  
+
+ 
+
+
+
+    @media (max-width: 768px) {
+      #hideOnSmallDevices {
+        display: none;
+      }
+    }
+
+
+    /* Media query to show the div on devices bigger than a tablet */
+    @media (min-width: 769px) {
+      #showOnLargeDevices {
+        display: block;
+      }
+    }
+
+
+
+  
+    
+
+
+    .input-container {
+      position: relative;
+  }
+  
+  .placeholder {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px; /* Adjust as needed */
+      pointer-events: none;
+      opacity: 0.5; /* Adjust opacity as needed */
+      color: #000; /* Adjust color as needed */
+      font-size: 0.8em; /* Adjust font size as needed */
+  }
