@@ -169,3 +169,26 @@ font-weight: 700;}
   }
 
 
+  .announcement-banner {
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+    z-index: 1050;
+}
+
+.announcement-banner a {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Hide banner on tablets and mobiles */
+@media (max-width: 1024px) {
+    .announcement-banner {
+        display: none;
+    }
+}
