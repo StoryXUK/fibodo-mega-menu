@@ -2,7 +2,7 @@ const days1 =document.querySelector("#days")
 const hours1 =document.querySelector("#hours")
 const minutes1 =document.querySelector("#minutes")
 const seconds1  =document.querySelector("#seconds")
-const newYears = 'Dec 31  2024 00:00:00';
+const newYears = 'Jan 31  2025 00:00:00';
 
 function countdown(){
     const newYearsDate = new Date(newYears);
