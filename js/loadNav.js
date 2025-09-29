@@ -24,13 +24,13 @@ function loadContent(elementId, file, callback) {
 function highlightActiveNavItem() {
   let path = window.location.pathname;
 
-  // Normalize path: add index.html to directory root
+  // Normalize path: add home.html to directory root
   if (path.endsWith("/")) {
-    path += "index.html";
+    path += "home.html";
   }
 
   // Extract just the file name
-  const currentPage = path.split("/").pop() || "index.html";
+  const currentPage = path.split("/").pop() || "home.html";
 
   // Select all nav links
   const navLinks = document.querySelectorAll(".nav-link");
