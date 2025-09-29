@@ -678,3 +678,248 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
+ document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.radio-switch .nav-link');
+  if (!tabs.length) return;
+
+  let currentIndex = 0;
+  let rotationId = null;
+
+  activateTab(currentIndex);
+  startRotation();
+
+  // parent section wrapper
+  const section = document.querySelector('.switch-content-tabs');
+  if (section) {
+    section.addEventListener('mouseenter', stopRotation);
+    section.addEventListener('mouseleave', startRotation);
+  }
+
+  // if a user clicks a tab, jump to it immediately
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      currentIndex = i;
+      activateTab(currentIndex);
+    });
+  });
+
+  function startRotation() {
+    stopRotation(); // clear any existing interval
+    rotationId = setInterval(() => {
+      currentIndex = (currentIndex + 1) % tabs.length;
+      activateTab(currentIndex);
+    }, 3000); // 3 seconds
+  }
+
+  function stopRotation() {
+    if (rotationId) {
+      clearInterval(rotationId);
+      rotationId = null;
+    }
+  }
+
+  function activateTab(index) {
+    tabs.forEach((tab, i) => {
+      const isActive = i === index;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', isActive);
+      tab.classList.toggle('show', isActive);
+
+      const targetId = tab.getAttribute('data-bs-target');
+      const pane = document.querySelector(targetId);
+      if (pane) {
+        pane.classList.toggle('active', isActive);
+        pane.classList.toggle('show', isActive);
+      }
+    });
+  }
+});
+
+
+// Features Tabs
+
+document.addEventListener('DOMContentLoaded', () => {
+  // ================================
+  // 1) MENU WIDGET TABS (LEFT MENU)
+  // ================================
+  (function initMenuWidgetTabs() {
+    const menu = document.querySelector('.menu-widget .menu-widget-items');
+    if (!menu) return;
+
+    const links  = Array.from(menu.querySelectorAll('a[role="tab"]'));
+    const panels = Array.from(document.querySelectorAll('.service-single[role="tabpanel"]'));
+    if (!links.length || !panels.length) return;
+
+    function getIdFromHref(href) {
+      try {
+        const url = new URL(href, window.location.href);
+        return url.hash.replace('#', '');
+      } catch {
+        return href.startsWith('#') ? href.slice(1) : href;
+      }
+    }
+
+    function activateTab(id, pushHash = true) {
+      // Panels: toggle [hidden]
+      panels.forEach(panel => {
+        if (panel.id === id) {
+          panel.removeAttribute('hidden');
+        } else {
+          panel.setAttribute('hidden', '');
+        }
+      });
+
+      // Menu links: ARIA + .is-active
+      links.forEach(link => {
+        const li = link.closest('.menu-item');
+        const isActive = getIdFromHref(link.getAttribute('href')) === id;
+        link.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        if (li) li.classList.toggle('is-active', isActive);
+      });
+
+      // URL hash (no page jump)
+      if (pushHash) {
+        const newHash = '#' + id;
+        if (window.location.hash !== newHash) {
+          history.replaceState(null, '', newHash);
+        }
+      }
+    }
+
+    // Click handling (event delegation)
+    menu.addEventListener('click', (e) => {
+      const a = e.target.closest('a[role="tab"]');
+      if (!a) return;
+      const id = getIdFromHref(a.getAttribute('href'));
+      if (!id) return;
+
+      const targetPanel = document.getElementById(id);
+      if (targetPanel) {
+        e.preventDefault();
+        activateTab(id, true);
+        // Optional scroll on mobile:
+        // targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      // else allow normal navigation
+    });
+
+    // Initialise from hash or first link
+    const initialIdFromLink = getIdFromHref(links[0]?.getAttribute('href') || '');
+    const initialHash = window.location.hash ? window.location.hash.slice(1) : '';
+    const startId = panels.some(p => p.id === initialHash) ? initialHash
+                  : (panels.some(p => p.id === initialIdFromLink) ? initialIdFromLink
+                  : panels[0].id);
+    activateTab(startId, false);
+
+    // Respond to external hash changes
+    window.addEventListener('hashchange', () => {
+      const id = window.location.hash.slice(1);
+      if (panels.some(p => p.id === id)) activateTab(id, false);
+    });
+  })();
+
+
+  // ==========================================
+  // 2) AUTO-ROTATING .radio-switch NAV TABS
+  // ==========================================
+  (function initAutoRotatingTabs() {
+    const tabs = document.querySelectorAll('.radio-switch .nav-link');
+    if (!tabs.length) return;
+
+    let currentIndex = 0;
+    let rotationId = null;
+
+    function activateSwitchTab(index) {
+      tabs.forEach((tab, i) => {
+        const isActive = i === index;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive);
+        tab.classList.toggle('show', isActive);
+
+        const targetId = tab.getAttribute('data-bs-target'); // e.g. "#pane-1"
+        const pane = targetId ? document.querySelector(targetId) : null;
+        if (pane) {
+          pane.classList.toggle('active', isActive);
+          pane.classList.toggle('show', isActive);
+        }
+      });
+    }
+
+    function startRotation() {
+      stopRotation();
+      rotationId = setInterval(() => {
+        currentIndex = (currentIndex + 1) % tabs.length;
+        activateSwitchTab(currentIndex);
+      }, 3000);
+    }
+
+    function stopRotation() {
+      if (rotationId) {
+        clearInterval(rotationId);
+        rotationId = null;
+      }
+    }
+
+    // Hover pause on parent section
+    const section = document.querySelector('.switch-content-tabs');
+    if (section) {
+      section.addEventListener('mouseenter', stopRotation);
+      section.addEventListener('mouseleave', startRotation);
+    }
+
+    // Click to jump immediately
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        currentIndex = i;
+        activateSwitchTab(currentIndex);
+      });
+    });
+
+    // Initial activate + start
+    activateSwitchTab(currentIndex);
+    startRotation();
+  })();
+});
+
+
+
+
+
+  // Remove preloader once page has loaded
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+      preloader.classList.add("fade-out");
+    }, 2300); // show for ~2 seconds
+  });
+
+const element = document.getElementById("swap-word");
+  const deleteWord = "Run";
+  const newWord = "Grow";
+  let i = deleteWord.length;
+
+  // delete letters one by one
+  function deleteEffect() {
+    if (i >= 0) {
+      element.textContent = deleteWord.substring(0, i);
+      i--;
+      setTimeout(deleteEffect, 100); // speed of deletion
+    } else {
+      typeEffect();
+    }
+  }
+
+  // type new letters one by one
+  let j = 0;
+  function typeEffect() {
+    if (j <= newWord.length) {
+      element.textContent = newWord.substring(0, j);
+      j++;
+      setTimeout(typeEffect, 100); // speed of typing
+    }
+  }
+
+  // start after delay
+  setTimeout(deleteEffect, 1200);
