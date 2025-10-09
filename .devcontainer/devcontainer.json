@@ -1,0 +1,12 @@
+{
+  "name": "fibodo-mega-menu",
+  "image": "mcr.microsoft.com/devcontainers/base:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.11" }
+  },
+  "remoteUser": "gitpod",
+  "containerUser": "gitpod",
+  "workspaceFolder": "/workspace/fibodo-mega-menu",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/fibodo-mega-menu,type=bind"
+}

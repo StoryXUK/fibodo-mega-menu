@@ -1,0 +1,7 @@
+tasks:
+    init-000:
+        command: npm install
+        description: init task migrated from .gitpod.yml
+        name: 'Task 0: init'
+        triggeredBy:
+            - postDevcontainerStart
